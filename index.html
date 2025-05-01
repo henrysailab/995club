@@ -1,139 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$9.95 Club - Discover the Company</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The $9.95 Club</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      background: #f4f4f4;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #003b49;
     }
-    header {
-      background: #005a8d;
-      color: white;
+
+    .section {
+      padding: 60px 20px;
       text-align: center;
-      padding: 40px 20px 20px;
     }
-    header h1 {
-      font-size: 24px;
+
+    .header {
+      background-color: #007c91;
+      color: white;
+      padding: 80px 20px 40px;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
       margin-bottom: 10px;
     }
-    header ul {
+
+    .header h3 {
+      font-weight: bold;
+      margin: 10px 0 30px;
+    }
+
+    .header ul {
       list-style: none;
       padding: 0;
-      margin: 10px 0 0;
-      line-height: 1.6;
-    }
-    .video-section {
-      text-align: center;
-      background: #ffffff;
-      padding: 30px 20px;
-    }
-    .video-section iframe {
-      width: 100%;
       max-width: 600px;
-      height: 315px;
-      border: none;
-    }
-    .badges {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 30px;
-      padding: 20px;
-      background: #ffffff;
-      flex-wrap: wrap;
-    }
-    .badges img {
-      max-height: 80px;
-    }
-    .stats {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 20px;
+      margin: 0 auto 40px;
       text-align: left;
-      background: #ffffff;
-      flex-wrap: wrap;
     }
-    .stats div {
-      max-width: 300px;
+
+    .header ul li {
+      font-size: 1.1em;
+      margin: 10px 0;
+      position: relative;
+      padding-left: 30px;
     }
-    .cta-section {
-      background: #e6f2f8;
-      text-align: center;
-      padding: 40px 20px;
+
+    .header ul li::before {
+      content: "✓";
+      color: #00e0d5;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.2em;
     }
-    .cta-section h2 {
-      margin-bottom: 15px;
-      font-size: 28px;
+
+    .video-section {
+      background-color: #dff6f6;
     }
-    .cta-section p {
-      font-size: 16px;
-      margin-bottom: 25px;
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 800px;
+      margin: 0 auto 20px;
     }
-    .cta-section button {
-      background: #007acc;
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .cta-button {
+      background-color: #00a5b5;
       color: white;
+      padding: 14px 28px;
+      font-size: 1.2em;
       border: none;
-      padding: 15px 25px;
-      font-size: 16px;
-      border-radius: 5px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
       cursor: pointer;
     }
-    .testimonial {
-      background: #ffffff;
-      text-align: center;
-      padding: 25px 15px;
-      font-style: italic;
+
+    .cta-button:hover {
+      background-color: #008c9e;
     }
-    .cta-image {
-      width: 100%;
+
+    .badges {
+      background-color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px;
+      padding: 60px 20px 20px;
+    }
+
+    .badge-block {
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .badge-block img {
+      max-width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .badge-block h4 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .community-section {
+      background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      color: white;
+      padding: 80px 20px;
+    }
+
+    .community-section h2 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .community-section h4 {
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    .benefits-section {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .benefits-section h3 {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .benefits-section ul {
+      list-style: none;
+      padding: 0;
       max-width: 600px;
       margin: 0 auto 30px;
-      display: block;
+      text-align: left;
+    }
+
+    .benefits-section ul li {
+      font-size: 1.1em;
+      margin: 10px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .benefits-section ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #007c91;
+    }
+
+    .benefits-section p {
+      font-size: 1.1em;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .benefits-section .cta-bold {
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .benefits-section .cta-sub {
+      font-weight: bold;
+      font-size: 1em;
+      margin-top: 10px;
+      color: #444;
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <div class="header">
     <h1>Discover the Company Behind the $9.95 Club</h1>
+    <h3>MEMBERSHIP HAS ITS PRIVILEGES</h3>
     <ul>
       <li>Feel better and live healthier with premium wellness products</li>
       <li>Grow faster using done-for-you marketing tools</li>
       <li>Earn globally with a proven, scalable income system</li>
+      <li>Perfect Timing</li>
     </ul>
-  </header>
+  </div>
 
-  <div class="video-section">
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Intro Video"></iframe>
+  <div class="section video-section">
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <a class="cta-button" href="#">Find Out More Now</a>
   </div>
 
   <div class="badges">
-    <img src="image.png" alt="Direct Selling News Global 100 and BFH AAA+ Rating">
-  </div>
-
-  <div class="stats">
-    <div>
-      <p><strong>Almost 2 MILLION Members</strong><br>After 2 years, the fastest growing community in home-based income and wellness</p>
+    <div class="badge-block">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/DSN_Logo.png" alt="Global 100 Badge" />
+      <h4>Almost 2 MILLION Members</h4>
+      <p>After 2 years, the fastest-growing company in this industry, with almost 2 million members!</p>
     </div>
-    <div>
-      <p><strong>AAA+ Business Rating</strong><br>Business for Home has given our Club incredible recognition and a top-tier rating!</p>
+    <div class="badge-block">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Business-For-Home-Logo.svg/512px-Business-For-Home-Logo.svg.png" alt="BFH Badge" />
+      <h4>AAA+ Business Rating</h4>
+      <p>Business For Home has given our $9.95 Club the incredible rating of AAA+ for meeting and maintaining expected business practices.</p>
     </div>
   </div>
 
-  <div class="cta-section">
-    <img src="image.png" alt="Smiling Members" class="cta-image">
-    <h2>JOIN THE $9.95 CLUB TODAY!</h2>
-    <p>Get access to exclusive products, tools, and global opportunities</p>
-    <button onclick="location.href='https://your-signup-link.com'">Get Started Now</button>
+  <div class="community-section">
+    <h2>Join The $9.95 Club Today!</h2>
+    <h4>Perfect Timing</h4>
+    <a class="cta-button" href="#">Get Started Now</a>
   </div>
 
-  <div class="testimonial">
-    <p>"Joining for 9.95 was the best decision I’ve made for my health income!"</p>
+  <div class="benefits-section">
+    <h3>Why the $9.95 Club?</h3>
+    <ul>
+      <li>No more buying and selling expensive products</li>
+      <li>No more buying a course to sell a course</li>
+      <li>No more expensive high ticket affiliate programs</li>
+      <li>No more crypto scams or get rich quick schemes</li>
+    </ul>
+    <p>Just a simple AND SAFE $9.95 program that PAYS YOU to share an exciting message with your friends.</p>
+    <div class="cta-bold">MEMBERSHIP HAS ITS PRIVILEGES</div>
+    <div class="cta-sub">YOUR TIME IS NOW.<br/>
+    Join the game-changing movement that is designed for you to access the highest quality vitamins and supplements on the planet while also tapping into an exclusive community where affordability meets opportunity — allowing you to take control of your financial future.</div>
+    <br/>
+    <a class="cta-button" href="#">Get Started Now</a>
   </div>
+
 </body>
 </html>
