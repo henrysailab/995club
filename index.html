@@ -21,6 +21,7 @@
       background-color: #007c91;
       color: white;
       padding: 80px 20px 40px;
+      text-align: center;
     }
 
     .header h1 {
@@ -62,21 +63,16 @@
     }
 
     .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      max-width: 800px;
+      max-width: 960px;
       margin: 0 auto 20px;
+      aspect-ratio: 16 / 9;
     }
 
     .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       border-radius: 10px;
+      border: none;
     }
 
     .cta-button {
@@ -119,10 +115,16 @@
       margin-bottom: 10px;
     }
 
+    .badge-block p {
+      font-size: 1em;
+      margin: 0;
+    }
+
     .community-section {
-      background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      background: url('/mnt/data/group-background.png') no-repeat center center/cover;
       color: white;
       padding: 80px 20px;
+      text-align: center;
     }
 
     .community-section h2 {
@@ -195,7 +197,7 @@
     <h3>MEMBERSHIP HAS ITS PRIVILEGES</h3>
     <ul>
       <li>Feel better and live healthier with premium wellness products</li>
-      <li>Grow faster using done-for-you marketing tools</li>
+      <li>Grow faster using simple marketing tools</li>
       <li>Earn globally with a proven, scalable income system</li>
       <li>Perfect Timing</li>
     </ul>
@@ -203,19 +205,19 @@
 
   <div class="section video-section">
     <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
     </div>
     <a class="cta-button" href="#">Find Out More Now</a>
   </div>
 
   <div class="badges">
     <div class="badge-block">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/DSN_Logo.png" alt="Global 100 Badge" />
+      <img src="/mnt/data/f0bb3205-7bdd-47a1-a148-d8487890f568.png" alt="Global 100 Badge" />
       <h4>Almost 2 MILLION Members</h4>
       <p>After 2 years, the fastest-growing company in this industry, with almost 2 million members!</p>
     </div>
     <div class="badge-block">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Business-For-Home-Logo.svg/512px-Business-For-Home-Logo.svg.png" alt="BFH Badge" />
+      <img src="/mnt/data/f0bb3205-7bdd-47a1-a148-d8487890f568.png" alt="BFH Badge" />
       <h4>AAA+ Business Rating</h4>
       <p>Business For Home has given our $9.95 Club the incredible rating of AAA+ for meeting and maintaining expected business practices.</p>
     </div>
